@@ -10,5 +10,8 @@ namespace meemweb_mvc.Models
         public string Email { get; set; }
         public string Mobile { get; set; }
         public string Instagram { get; set; }
+        public string Whatsapp { get; set; }
+        public string Github { get; set; }
+
     }
 }

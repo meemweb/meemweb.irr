@@ -39,6 +39,8 @@ namespace meemweb_mvc.Controllers
                 Email = "mojtabamoradiw@gmail.com",
                 Mobile = "09382420202",
                 Instagram = "instagram.com/meemweb",
+                Github = "github.com/meemweb",
+                Whatsapp = "https://api.whatsapp.com/send?phone=+989382420202&text=%D8%B3%D9%84%D8%A7%D9%85%20%D9%88%D9%82%D8%AA%20%D8%A8%D8%AE%DB%8C%D8%B1&source=&data="
             };
             return View(contact);
         }

@@ -1,4 +1,5 @@
-﻿@*
+﻿@model Contact
+@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -36,44 +37,50 @@
         <div class="row">
             <div class="mbox col-lg-3 col-12">
                 <!-- Form -->
-                <img src="~/images/project/github.png"
-                     alt="color_image" width="200">
+                <a href="@Model.Github">
+                    <img src="~/images/project/github.png"
+                         alt="color_image" width="200">
+                </a>
                 <br>
 
                 <!-- Displaying text at
                 the center of the box-->
                 <p class="mcenter">
-                    People can fill up the form and send us the problem
+                    @Model.Github
                 </p>
 
             </div>
             <div class="mbox col-lg-3 col-12">
 
                 <!-- Email -->
-                <img src="~/images/project/Instagram.webp"
-                     alt="color_image" width="200">
-                <br>
+                <a href="@Model.Instagram">
+                    <img src="~/images/project/Instagram.webp"
+                         alt="color_image" width="200">
+                    </a>
+                    <br>
 
-                <!-- Displaying text at
-                the center of the box-->
-                <p class="mcenter">
-                    Use this Email to send us about the problem faced
-                </p>
+                    <!-- Displaying text at
+        the center of the box-->
+                    <p class="mcenter">
+                        @Model.Instagram
+                    </p>
 
             </div>
             <div class="mbox col-lg-3 col-12">
-                <img src="~/images/project/Whatsapp.png"
-                     alt="color_image" width="200">
-                <br>
+                <a href="@Model.Whatsapp">
+                    <img src="~/images/project/Whatsapp.png"
+                         alt="color_image" width="200">
+                    </a>
+                    <br>
 
-                <!-- Displaying text at
-                the center of the box-->
-                <p class="mcenter">
-                    Toll Free Number:+1800 200 300 400
-                </p>
+                    <!-- Displaying text at
+        the center of the box-->
+                    <p class="mcenter">
+                        @Model.Whatsapp
+                    </p>
 
             </div>
 
-    </>
+    </div>
     </div>
 </section>
