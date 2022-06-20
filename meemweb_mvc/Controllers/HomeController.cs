@@ -30,13 +30,17 @@ namespace meemweb_mvc.Controllers
 
         public IActionResult footer()
         {
+            return View(); 
+        }
+        public IActionResult ContactPage()
+        {
             var contact = new Contact()
             {
                 Email = "mojtabamoradiw@gmail.com",
                 Mobile = "09382420202",
                 Instagram = "instagram.com/meemweb",
             };
-            return View(contact); 
+            return View(contact);
         }
         public IActionResult Services()
         {
