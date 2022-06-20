@@ -1,6 +1,6 @@
-﻿using meemweb_mvc.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using meemweb_mvc.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -23,7 +23,22 @@ namespace meemweb_mvc.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+       public IActionResult Blog()
+        {
+            return View();
+        }
+
+        public IActionResult footer()
+        {
+            var contact = new Contact()
+            {
+                Email = "mojtabamoradiw@gmail.com",
+                Mobile = "09382420202",
+                Instagram = "instagram.com/meemweb",
+            };
+            return View(contact); 
+        }
+        public IActionResult Services()
         {
             return View();
         }
