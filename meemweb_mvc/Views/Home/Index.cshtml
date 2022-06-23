@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<Portfolio>
+
+@{
     ViewData["Title"] = "main page";
     ViewData["description"] = "medical shop";
 }
@@ -49,37 +51,19 @@
                 <div class="col-lg-8 mx-auto">
                     <h2>Things I have designed for digital media agencies</h2>
                 </div>
-
                 <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="images/project/project-image01.png" class="img-fluid" alt="project image">
-                        </div>
-                    </div>
 
+                    @foreach (var portfolio in Model)
+                    {
                     <div class="item">
                         <div class="project-info">
-                            <img src="images/project/project-image02.png" class="img-fluid" alt="project image">
+                            <a href="~/images/project/@portfolio.PicUrl">
+                                <img src="~/images/project/@portfolio.PicUrl" class="img-fluid" alt="@portfolio.Alt" title="@portfolio.Title">
+                            </a>
                         </div>
                     </div>
+                    }
 
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="images/project/project-image03.png" class="img-fluid" alt="project image">
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="images/project/project-image04.png" class="img-fluid" alt="project image">
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="project-info">
-                            <img src="images/project/project-image05.png" class="img-fluid" alt="project image">
-                        </div>
-                    </div>
                 </div>
 
             </div>

@@ -11,6 +11,25 @@ namespace meemweb_mvc.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly List<Portfolio> portfolios = new()
+        {
+            new Portfolio()
+            {
+                ID=1, Title="نمونه کار اول", Alt= "نمونه کار اول", PicUrl="project-image01.png" 
+            },
+            new Portfolio()
+            {
+                ID=1, Title="نمونه کار دوم", Alt= "نمونه کار دوم", PicUrl="project-image02.png"
+            },
+            new Portfolio()
+            {
+                ID=1, Title="نمونه کار سوم", Alt= "نمونه کار سوم", PicUrl ="project-image03.png"
+            },
+            new Portfolio()
+            {
+                ID=1, Title="نمونه کار چهارم", Alt= "نمونه کار چهارم", PicUrl ="project-image04.png"
+            }
+        };
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -20,7 +39,7 @@ namespace meemweb_mvc.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(portfolios);
         }
 
        public IActionResult Blog()
